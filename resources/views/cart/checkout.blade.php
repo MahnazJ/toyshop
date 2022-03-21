@@ -1,4 +1,4 @@
-@extends ('layouts.frontend')
+@extends ('layouts.app')
 
 @section ('styles')
 
@@ -64,6 +64,7 @@
         margin-bottom: 200px;
     }
 </style>
+
 @section('content')
 
 

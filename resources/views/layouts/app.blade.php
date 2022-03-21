@@ -40,14 +40,18 @@
                                 <li><a class="dropdown-item button-style text-style" href="{{ route('products') }}">Products</a></li>
                                 <li><a class="dropdown-item button-style text-style" href="#">Sale</a></li>
                             </ul>
-
+                            <ul>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('about') }}">About Us</a></li>
-                                {{-- <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
-                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> --}}
+                                <cart /> 
+                            </ul>
 
+                                {{-- <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> --}}
+                            
                     <!-- Right Side Of Navbar -->
-                    {{-- <ul class="navbar-nav ms-auto"> --}}
+                    <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
