@@ -12,7 +12,7 @@
             <div class="card">
                 <img src="/images/webshop/{{ $product->file_name }}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
-                    <h5 class="card-title text-style">{{ $product->productname }}</h5>
+                    <h5 class="card-title text-style">{{ $product->name }}</h5>
                         <p class="price text-style"> &euro; {{ $product->price }}</p>
                         <p class="price text-style">Details: {{ $product->details }}</p>
                         <p class="price text-style">Color: {{ $product->color }}</p>

@@ -28,31 +28,26 @@
                 </div>
 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light m-10">
-                    <a class="navbar-brand" href="{{ url('/') }}"><img src="logo_small_icon_only.png" alt="" width="90" height="100"></a>
+                    <a class="navbar-brand" href="{{ url('/') }}"><img src="/logo_small_icon_only.png" alt="" width="90" height="100"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                          aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
                                 <li class=" nav-item"><a class="nav-link active nav-button" aria-current="page" href="{{ route('home') }}">Home</a></li>
-                                <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="{{ route('shop') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                                <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item button-style text-style" href="{{ route('products.index') }}">Products</a></li>
+                                <li><a class="dropdown-item button-style text-style" href="{{ route('products') }}">Products</a></li>
                                 <li><a class="dropdown-item button-style text-style" href="#">Sale</a></li>
                             </ul>
 
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('about') }}">About Us</a></li>
-                                <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
-                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-
-
-
-
+                                {{-- <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> --}}
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    {{-- <ul class="navbar-nav ms-auto"> --}}
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
