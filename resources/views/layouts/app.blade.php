@@ -43,7 +43,7 @@
                             <ul>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('about') }}">About Us</a></li>
-                                <cart /> 
+                        
                             </ul>
 
                                 {{-- <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
@@ -84,9 +84,16 @@
                                 </div>
                             </li>
                         @endguest
+                    
                     </ul>
+                    <ul>
+                        <cart /> 
+                    </u>
+
                 </div>
+                
             </div>
+         
         </nav>
 
         <main class="py-4">
