@@ -40,29 +40,24 @@
                                 <li><a class="dropdown-item button-style text-style" href="{{ route('products') }}">Products</a></li>
                                 <li><a class="dropdown-item button-style text-style" href="#">Sale</a></li>
                             </ul>
-                            <ul>
+                            
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('contact') }}">Contact</a></li>
                                 <li class="nav-item"><a class="nav-link nav-button" href="{{ route('about') }}">About Us</a></li>
-                        
-                            </ul>
-
+                          
                                 {{-- <li class="nav-item dropdown"><a class="nav-link nav-button dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                 
                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> --}}
-                            
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link nav-button" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link nav-button" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -83,18 +78,16 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
-                    
-                    </ul>
-                    <ul>
-                        <cart /> 
-                    </u>
-
-                </div>
+                        @endguest                  
                 
+                </div>            
+                <cart/>  
             </div>
          
         </nav>
+
+           
+      
 
         <main class="py-4">
             @yield('content')
