@@ -6,3 +6,19 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+
+@import 'buttons';
+@import 'cart';
+@import 'general';
+@import 'headerfooter';
+@import 'images';
+@import 'main';
+@import 'navbar';
+@import 'newstyle';
+@import 'registerlogin';
