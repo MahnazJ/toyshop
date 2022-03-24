@@ -13,11 +13,10 @@
                 <img src="/images/webshop/{{ $product->file_name }}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
                     <h5 class="card-title text-style">{{ $product->name }}</h5>
-                        <p class="price text-style"> &euro; {{ $product->price }}</p>
-                        <p class="price text-style">Details: {{ $product->details }}</p>
-                        <p class="price text-style">Color: {{ $product->color }}</p>
+                    <p class="price text-style"> &euro; {{ $product->price }}</p>
+                    <p class="price text-style">Color: {{ $product->color }}</p>
 
-                        <add-to-cart-button product-id="{{ $product->id }}" user-id="{{ auth()->user()->id ?? 0 }}"/>
+                    <add-to-cart-button product-id="{{ $product->id }}" user-id="{{ auth()->user()->id ?? 0 }}" />
                 </div>
             </div>
         </div>

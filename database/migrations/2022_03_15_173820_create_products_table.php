@@ -23,7 +23,6 @@ return new class extends Migration
             $table->integer('sale_price');
             $table->string('color');
             $table->integer('stock');
-            $table->string('details');
             $table->timestamps();
         });
     }

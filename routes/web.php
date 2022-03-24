@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartsController;
 use App\Http\Controllers\AboutController;
@@ -26,7 +26,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/shop', [ShopController::class, 'index'])->name('shop');
@@ -40,6 +39,5 @@ Route::get('/products', [ProductsController::class, 'index']) ->name('products')
 Route::post('/cart', [CartsController::class, 'store'])->name('cart');
 Route::get('/checkout', [CartsController::class, 'index'])->name('checkout');
 
-
 //user routes
-Route::get('/user', [App\Http\Controllers\UsersController::class, 'index'])->name('loggedinuser');
+Route::get('/user', [UsersController::class, 'index'])->name('loggedinuser');
