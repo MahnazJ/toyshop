@@ -29128,7 +29128,7 @@ var render = function () {
         attrs: { href: "/checkout" },
       },
       [
-        _c("i", { staticClass: "fa-solid fa-cart-shopping" }),
+        _c("i", { staticClass: "fa-solid fa-cart-shopping p-1" }),
         _vm._v("Cart " + _vm._s(_vm.itemCount)),
       ]
     ),
