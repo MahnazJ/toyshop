@@ -1,7 +1,7 @@
 <template>
     <div class="nav-item">
    
-      <a href="/checkout" class="btn text-style submit-button"> <i class="fa-solid fa-cart-shopping p-1"></i>Cart {{ itemCount }}</a>
+      <a href="/checkout" class="btn text-style submit-button m-2"> <i class="fa-solid fa-cart-shopping p-1"></i>Cart {{ itemCount }}</a>
 
  
     </div>
