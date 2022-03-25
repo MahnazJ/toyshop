@@ -81,9 +81,20 @@
                         @endguest                  
                 
                 </div>            
-                <cart/>  
+                <cart></cart>
+                <ul>
+                    <li>
+                         <div class="input-group rounded mt-4">
+                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                             <span class="input-group-text border-0" id="search-addon">
+                               <i class="fas fa-search"></i>
+                             </span>
+                           </div>
+                     </li>
+                 </ul> 
+               
             </div>
-         
+            
         </nav>
 
            
@@ -106,9 +117,9 @@
     <h2 class="title footer-font-weight">Help Center</h2>
     <ul class="list-unstyled">
         <li><a href="#"></i> Test</a></li>
-        <li><a href="#"></i> FAQ's</a></li>
-        <li><a href="#"></i> About Us</a></li>
-        <li><a href="#"></i> About Us</a></li>
+        <li><a href="#"></i> Test</a></li>
+        <li><a href="#"></i> Test</a></li>
+        <li><a href="#"></i> Test</a></li>
     
     </ul>
     </div>
@@ -118,10 +129,10 @@
     <div class="footer-info-single">
     <h2 class="title footer-font-weight">Customer information</h2>
     <ul class="list-unstyled">
-        <li><a href="#"></i> About Us</a></li>
-        <li><a href="#"></i> FAQ's</a></li>
-        <li><a href="#"></i> Sustainability</a></li>
-        <li><a href="#"></i> Contact Us</a></li>
+        <li><a href="{{ route ('about') }}"></i> About Us</a></li>
+        <li><a href="#"></i> Test</a></li>
+        <li><a href="#"></i> Test</a></li>
+        <li><a href="{{ route ('contact') }}"></i> Contact Us</a></li>
     
     </ul>
     </div>
@@ -131,8 +142,8 @@
     <div class="footer-info-single">
     <h2 class="title footer-font-weight">Security & privacy</h2>
     <ul class="list-unstyled">
-        <li><a href="#"></i> Terms Of Use</a></li>
-        <li><a href="#"></i> Privacy Policy</a></li>
+        <li><a href="#"></i> Test</a></li>
+        <li><a href="#"></i> Test</a></li>
         <li><a href="#"></i> Test</a></li>
     </ul>
     </div>

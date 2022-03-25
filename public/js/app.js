@@ -29124,11 +29124,11 @@ var render = function () {
     _c(
       "a",
       {
-        staticClass: "btn text-style submit-button",
+        staticClass: "btn text-style submit-button m-2",
         attrs: { href: "/checkout" },
       },
       [
-        _c("i", { staticClass: "fa-solid fa-cart-shopping" }),
+        _c("i", { staticClass: "fa-solid fa-cart-shopping p-1" }),
         _vm._v("Cart " + _vm._s(_vm.itemCount)),
       ]
     ),
