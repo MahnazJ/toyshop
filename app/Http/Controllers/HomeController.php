@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+
 class HomeController extends Controller
 {
     /**
@@ -23,7 +24,31 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $products = DB::select('select * from products');
-        return view('welcome', ['products'=>$products]);
+        return view('welcome');
+    }
+
+    public function shop()
+    {
+        return view('shop');
+    }
+
+    public function products()
+    {
+        return view('products');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function cart()
+    {
+        return view('cart');
     }
 }

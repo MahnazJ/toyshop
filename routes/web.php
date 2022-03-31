@@ -1,13 +1,13 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartsController;
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,24 +20,28 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
+Route::get('/home', [HomeController::class, 'index'])->name('home.index'); //route for loggedin users
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-// Route::get('/shop', [ShopController::class, 'index'])->name('shop');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-
-// Route::resource('/products', ProductsController::class);
-
-Route::get('/products', [ProductsController::class, 'index']) ->name('products');
-
+// Page Routes
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+Route::redirect('/welcome', '/products'); //temp redirection from homepage to products page
+Route::get('/about', [HomeController::class, 'about'])->name('home.about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+// Cart specific Controller Route
 Route::post('/cart', [CartsController::class, 'store'])->name('cart');
 Route::get('/checkout', [CartsController::class, 'index'])->name('checkout');
 
-//user routes
-Route::get('/user', [UsersController::class, 'index'])->name('loggedinuser');
+// Product Routes CRUD
+Route::get('products', [ProductController::class, 'index'])->name('products.index'); //view all products
+Route::get('products/{id}', [ProductController::class, 'show'])->name('products.show'); // view single product by ID
+//Route::resource('products', ProductController::class); //resource adds basic CRUD  -> php artisan route:list
+
+// User Routes CRUD
+Route::get('user', [UserController::class, 'index'])->name('loggedinuser'); // UserController Routes
+Route::get('users', [UserController::class, 'index'])->name('users.index'); //view all users
+Route::get('users/{id}', [UserController::class, 'show'])->name('users.show'); //view single user by ID
+Route::get('users/{id}/edit', [UserController::class, 'update'])->name('users.edit'); //view edit user by ID
+Route::get('users/{id}/create', [UserController::class, 'create'])->name('users.create'); //view create user by ID
+Route::get('users/{id}/delete', [UserController::class]);
+//Route::resource('users', UserController::class); //resource adds basic CRUD  -> php artisan route:list

@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Product;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,31 +14,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-    //    $products = Product::all();
-    //    return view('products.index', compact('products'));
-        $products = DB::select('select * from products');
-        return view('products.index', ['products'=>$products]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        $products = Product::all();
+        return view('products.index', ['products' => $products]);
     }
 
     /**
@@ -50,7 +26,9 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('products.show', [
+            'product' => Product::find($id)
+        ]);
     }
 
     /**
@@ -61,7 +39,9 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('products.edit', [
+            'product' => Product::find($id)
+        ]);
     }
 
     /**
